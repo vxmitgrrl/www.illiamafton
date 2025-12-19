@@ -17,6 +17,8 @@
             <span>“The man behind the slaughter.”</span>
             
         </div>
+      <button class="sixam" onclick="confetti()"> 6 AM
+      </button>
 <div class="qr">
     <img 
         src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.google.com/search?q=жирный+уильям+афтон"
@@ -86,8 +88,8 @@
         max-width: 400px;
         margin: 20px auto;
         display: block;
-        filter: grayscale(100%) contrast(130%);
         border: 2px solid #000;
+      image-rendering: pixelated;
     }
 
     .quotes {
@@ -107,6 +109,57 @@
         letter-spacing: 2px;
         opacity: 0.6;
     }
+    .sixam {
+    margin-top: 25px;
+    padding: 10px 24px;
+    font-family: Impact, sans-serif;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    border: 3px solid #000;
+    cursor: pointer;
+}
+
+.sixam:hover {
+    background: #000;
+    color: #fff;
+}
+
+.confetti {
+    position: fixed;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    image-rendering: pixelated;
+    animation: fall linear forwards;
+    z-index: 999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+    <script>
+function confetti() {
+    for (let i = 0; i < 100; i++) {
+        const piece = document.createElement("div");
+        piece.classList.add("confetti");
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.animationDuration = (Math.random() * 2 + 2) + "s";
+
+        // белые + редкие фиолетовые (Afton energy)
+        piece.style.background =
+            Math.random() > 0.85 ? "#6b3fa0" : "#ffffff";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => piece.remove(), 4000);
+    }
+}
+</script>
 </style>
 <meta charset="UTF-8">
 <title> WILLIAM AFTON </title>
@@ -114,6 +167,7 @@
 </body>
 
 </html>
+
 
 
 
