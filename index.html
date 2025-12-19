@@ -141,25 +141,7 @@
         transform: translateY(110vh);
     }
 }
-    <script>
-function confetti() {
-    for (let i = 0; i < 100; i++) {
-        const piece = document.createElement("div");
-        piece.classList.add("confetti");
 
-        piece.style.left = Math.random() * 100 + "vw";
-        piece.style.animationDuration = (Math.random() * 2 + 2) + "s";
-
-        // белые + редкие фиолетовые (Afton energy)
-        piece.style.background =
-            Math.random() > 0.85 ? "#6b3fa0" : "#ffffff";
-
-        document.body.appendChild(piece);
-
-        setTimeout(() => piece.remove(), 4000);
-    }
-}
-</script>
 </style>
 <meta charset="UTF-8">
 <title> WILLIAM AFTON </title>
@@ -167,6 +149,7 @@ function confetti() {
 </body>
 
 </html>
+
 
 
 
