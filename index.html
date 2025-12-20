@@ -103,6 +103,9 @@
     border: 3px solid #000;
     cursor: pointer;
       text-transform: uppercase;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
 }
 
 .sixam:active {
@@ -125,12 +128,58 @@
         transform: translateY(110vh);
     }
 }
-
+.layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 40px;
+  max-width: 1200px;
+}
+    .creatures {
+      width: 320px;
+      border: 3px solid #000;
+      background: #111;
+      padding: 20px;
+      z-index: 2;
+    }
+    .creatures h2 {
+      font-family: Impact, sans-serif;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      -webkit-text-stroke: 1px #000;
+    }
+    .creature {
+     margin-bottom: 20px;
+      text-align: center;
+    }
+    .creature img {
+      width: 100%;
+      border: 2px solid: #000;
+      image-rendering: pixelated;
+    }
+    .creature-name {
+      margin-top: 6px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+      @media (max-width: 900px) {
+        .layout {
+          flex-direction: column;
+          align-items: center;
+        }
+        .creatures {
+          width: 100%;
+          max-width: 400px;
+        }
+      }
 </style>
 </head>
     
   <body>
-    <div class="container">
+    <div class="layout">
+      <div class="container">
         <h1>WILLIAM AFTON</h1>
 
         <div class="tagline">
@@ -154,6 +203,17 @@
     <div class="qr-text">
         scan for a surprise :)
     </div>
+  <div class="creatures">
+    <h1> AFTON'S ATROCIOUS CREAURES</h1>
+    <div class="creature">
+      <img src="fredd.jpg" alt="fredd">
+      <div class="creaure-name"> FREDD </div>
+    </div>
+     <div class="creature">
+      <img src="chick.jpg" alt="chick">
+      <div class="creaure-name"> CHICK </div>
+    </div>
+  </div>
 </div>
   <script>
 function confetti() {
@@ -178,6 +238,7 @@ function confetti() {
 </body>
 
 </html>
+
 
 
 
