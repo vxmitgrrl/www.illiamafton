@@ -111,19 +111,19 @@
         opacity: 0.6;
     }
     .sixam {
-    margin-top: 25px;
-    padding: 10px 24px;
-    font-family: Impact, sans-serif;
-    font-size: 20px;
+    margin-top: 30px;
+    padding: 14px 22px;
+    font-family: 'Press Start 2P, monospace;
+    font-size: 14px;
     background: #fff;
     color: #000;
-    border: 3px solid #000;
+    border: 3px solid #fff;
     cursor: pointer;
+      text-transform: uppercase;
 }
 
-.sixam:hover {
-    background: #000;
-    color: #fff;
+.sixam:active {
+    transform: ttranslateY(2px);
 }
 
 .confetti {
@@ -131,10 +131,10 @@
     top: -10px;
     width: 8px;
     height: 8px;
-    background: white;
+  animation: fall linear forwards;
+  z-index: 9999;
     image-rendering: pixelated;
-    animation: fall linear forwards;
-    z-index: 999;
+   
 }
 
 @keyframes fall {
@@ -147,9 +147,30 @@
 <meta charset="UTF-8">
 <title> WILLIAM AFTON </title>
 </head>
+  <script>
+function confetti() {
+    for (let i = 0; i < 80; i++) {
+        const piece = document.createElement("div");
+        piece.className = "confetti";
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.animationDuration = (Math.random() * 2 + 2) + "s";
+
+        piece.style.background =
+            Math.random() > 0.85 ? "#6b3fa0" : "#ffffff";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 4000);
+    }
+}
+</script>
 </body>
 
 </html>
+
 
 
 
