@@ -14,7 +14,8 @@
         min-height: 100vh;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+       padding-top: 40px;
         overflow-x: hidden;
       overflow-y: auto;
     }
@@ -76,7 +77,15 @@
         display: block;
         margin: 6px 0;
     }
-
+.qr {
+  margin-top: 30px;
+}
+    .qr-text{
+      margin-top: 6px;
+      font-size: 12px;
+      opacity: 0.6;
+      letter-spacing: 1px;
+    }
     .stamp {
         margin-top: 25px;
         font-size: 14px;
@@ -85,11 +94,12 @@
     }
     .sixam {
     margin-top: 30px;
-    padding: 14px 22px;
+    padding: 18px 26px;
     font-family: 'Press Start 2P', monospace;
-    font-size: 14px;
-    background: #fff;
-    color: #000;
+    font-size: 16px;
+      line-height: 1.6;
+    background: #000;
+    color: #fff;
     border: 3px solid #fff;
     cursor: pointer;
       text-transform: uppercase;
@@ -168,6 +178,7 @@ function confetti() {
 </body>
 
 </html>
+
 
 
 
